@@ -12,7 +12,7 @@ $(RKM) : $(ROM)
 	$(BIN2TAPE) -t rkm $< $@
 
 $(ROM) : $(SRC)
-	$(ZASM) --asm8080  $< $@
+	$(ZASM) -u --asm8080  $< $@
 
 clean:
 	rm -f $(ROM) $(RKM)
